@@ -1,0 +1,20 @@
+name: ci-wf
+
+on:
+  pull_request:
+    branches:  
+      - develop
+    types:
+      - opened
+      - synchronize
+
+  push:
+    branches:
+      - develop
+
+jobs:
+  linting-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome step
+        run: echo "CI Pipeline for this repo"
